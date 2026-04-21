@@ -1,0 +1,5 @@
+function showImage(src, text) {
+  document.getElementById("galerie-img").src = src;
+  document.getElementById("galerie-modal").style.display = "block";
+  document.getElementById("galerie-popisek").innerHTML = text;
+}
