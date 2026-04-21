@@ -1,0 +1,21 @@
+<header class="header">
+    <nav class="navbar">
+        <a class="logo" href="index.php">
+            <img src="img/logo1.png" alt="Logo firmy" width="120">
+        </a>
+
+        <ul class="nav-menu">
+            <li><a href="#onas">O nás</a></li>
+            <li><a href="#sluzby">Služby</a></li>
+            <li><a href="#ukazky">Ukázky práce</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#recenze">Recenze</a></li>
+        </ul>
+
+        <div class="socialni-link">
+            <a href="https://instagram.com" target="_blank">
+                <img src="img/ig_logo.png" alt="Instagram">
+            </a>
+        </div>
+    </nav>
+</header>

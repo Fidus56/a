@@ -1,0 +1,7 @@
+<footer class="section">
+    © 2026 Filip Drnec | <a href="mailto:filip@email.cz">filip@email.cz</a>
+</footer>
+
+<script src="Java.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+function zmenObrazek(obrazek, popis) {
+    document.getElementById("ukazka-obrazek").src = obrazek;
+    document.getElementById("ukazka-obrazek").alt = popis;
+    document.getElementById("ukazka-popis").innerHTML = popis;
+}

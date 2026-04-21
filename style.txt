@@ -1,0 +1,370 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    color: #111;
+    background-color: #f1f1f1;
+    line-height: 1.6;
+}
+
+/* NAV */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo img {
+    display: block;
+    width: 120px;
+    height: auto;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 26px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    color: #111;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav-menu a:hover {
+    color: #777;
+}
+
+.socialni-link img {
+    width: 28px;
+    height: 28px;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: url("img/fotka.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 120px 8% 80px;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 54px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 18px;
+    max-width: 620px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.25s;
+}
+
+.btn-primarni {
+    background: #111;
+    color: #fff;
+}
+
+.btn-primarni:hover {
+    background: #444;
+}
+
+.btn-sekundarni {
+    background: #fff;
+    color: #111;
+}
+
+.btn-sekundarni:hover {
+    background: #ddd;
+}
+
+/* SECTIONS */
+.section {
+    padding: 96px 8% 72px;
+    background: #fff;
+}
+
+.section:nth-child(even) {
+    background: #f7f7f7;
+}
+
+.section h2 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 12px;
+}
+
+.section p {
+    font-size: 17px;
+    max-width: 900px;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 24px;
+}
+
+/* KARTIČKY */
+.galerie-obrazky {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.karticka {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 24px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.karticka h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.karticka p {
+    font-size: 16px;
+}
+
+/* UKÁZKY */
+.ukazky-box {
+    width: fit-content;
+    margin: 30px auto 0 auto;
+    text-align: center;
+    
+}
+
+.ukazky-box img {
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: white;
+}
+
+.ukazky-menu h3 {
+    cursor: pointer;
+}
+
+.ukazky-box p {
+    margin-top: 10px;
+    text-align: center;
+}
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    padding: 20px;
+    
+}
+
+.modal-content {
+    display: block;
+    margin: 60px auto 20px;
+    max-width: 85%;
+    max-height: 75vh;
+}
+
+#galerie-popisek {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+/* KONTAKT */
+.kontakty {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.obrazek {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 24px;
+    text-align: center;
+}
+
+.obrazek img {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px auto; /* vycentrování */
+  display: block;           /* nutné pro margin auto */
+}
+
+.obrazek a {
+    color: #111;
+    text-decoration: none;
+}
+
+.obrazek a:hover {
+    color: #666;
+}
+
+/* FORMULÁŘ */
+.recenze-form {
+    max-width: 760px;
+    margin-top: 20px;
+}
+
+.recenze-form input,
+.recenze-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background: #fff;
+}
+
+.recenze-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.recenze-form button {
+    background: #111;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.recenze-form button:hover {
+    background: #444;
+}
+
+.karticka small {
+    display: block;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer.section {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer.section a {
+    color: #fff;
+}
+
+footer.section a:hover {
+    color: #ccc;
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .galerie-obrazky,
+    .kontakty {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 140px 6% 70px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .section h2 {
+        font-size: 24px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

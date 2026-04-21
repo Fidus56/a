@@ -1,0 +1,143 @@
+<main>
+    <!-- HERO SEKCE -->
+    <section class="hero" id="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Název firmy / Jméno řemeslníka</h1>
+            <p>
+                Krátký popis firmy. Například: Poskytujeme kvalitní řemeslné služby
+                v Plzni a okolí, spolehlivě, pečlivě a za rozumnou cenu.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#kontakt" class="btn btn-primarni">Nezávazná poptávka</a>
+                <a href="#sluzby" class="btn btn-sekundarni">Naše služby</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- O NÁS -->
+    <section class="section" id="onas">
+        <h2>O nás</h2>
+        <p>
+            Sem dáš text podle přiděleného řemeslníka. Popiš firmu, zkušenosti,
+            zaměření, lokalitu, výhody a styl práce. Text má být normálně zadaný
+            podle podkladů, které jste dostali.
+        </p>
+        <br>
+        <img src="img/pic.png" alt="Fotografie firmy nebo řemeslné práce" width="500">
+    </section>
+
+
+    <!-- SLUŽBY -->
+    <section class="section" id="sluzby">
+        <h2>Služby</h2>
+
+        <div class="galerie-obrazky">
+            <div class="karticka sluzby">
+                <h3>Služba 1</h3>
+                <p>Krátký popis první služby, co přesně zákazník dostane.</p>
+                <p><strong>Orientační cena:</strong> 500 Kč / hod</p>
+            </div>
+
+            <div class="karticka sluzby">
+                <h3>Služba 2</h3>
+                <p>Krátký popis druhé služby, co přesně zákazník dostane.</p>
+                <p><strong>Orientační cena:</strong> 600 Kč / hod</p>
+            </div>
+
+            <div class="karticka sluzby">
+                <h3>Služba 3</h3>
+                <p>Krátký popis třetí služby, co přesně zákazník dostane.</p>
+                <p><strong>Orientační cena:</strong> 700 Kč / hod</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- UKÁZKY PRÁCE -->
+    <section class="section" id="ukazky">
+        <h2>Ukázky naší práce</h2>
+
+        <div class="ukazky-menu">
+            <h3 onclick="zmenObrazek('img/pic2.png', 'Ukázka práce 1')">Ukázka práce 1</h3>
+            <h3 onclick="zmenObrazek('img/pic3.png', 'Ukázka práce 2')">Ukázka práce 2</h3>
+            <h3 onclick="zmenObrazek('img/pic4.png', 'Ukázka práce 3')">Ukázka práce 3</h3>
+        </div>
+
+        <div class="ukazky-box">
+            <img id="ukazka-obrazek" src="img/pic2.png" alt="Ukázka práce 1">
+            <p id="ukazka-popis">Ukázka práce 1</p>
+        </div>
+    </section>
+
+
+    <!-- MODAL PRO OBRÁZKY -->
+    <div id="galerie-modal" class="modal" onclick="this.style.display='none'">
+        <img id="galerie-img" class="modal-content" src="" alt="Ukázka práce">
+        <p id="galerie-popisek" style="color:white; text-align:center; margin-top:15px;"></p>
+    </div>
+
+
+    <!-- KONTAKT -->
+    <section class="section" id="kontakt">
+        <h2>Kontakt</h2>
+
+        <div class="kontakty">
+            <div class="obrazek">
+                <img src="img/ig_logo.png" alt="Telefon" width="50">
+                <p><a href="tel:+420777123456">+420 777 123 456</a></p>
+            </div>
+
+            <div class="obrazek">
+                <img src="img/ig_logo.png" alt="E-mail" width="50">
+                <p><a href="mailto:info@firma.cz">info@firma.cz</a></p>
+            </div>
+
+            <div class="obrazek">
+                <img src="img/ig_logo.png" alt="Adresa" width="50">
+                <p>Plzeň a okolí</p>
+            </div>
+        </div>
+
+        <br><br>
+
+        <iframe
+            src="https://www.google.com/maps?q=Plzen&output=embed"
+            width="100%"
+            height="350"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+
+    <!-- RECENZE -->
+    <section class="section" id="recenze">
+        <h2>Recenze</h2>
+
+        <form action="index.php#recenze" method="POST" class="recenze-form">
+            <p>
+                <input type="text" name="jmeno" placeholder="Vaše jméno" required>
+            </p>
+            <br>
+            <p>
+                <input type="email" name="email" placeholder="Váš e-mail" required>
+            </p>
+            <br>
+            <p>
+                <textarea name="recenze" rows="5" placeholder="Napište svoji recenzi" required></textarea>
+            </p>
+            <br>
+            <button type="submit">Odeslat recenzi</button>
+        </form>
+
+        <div class="vypis-recenzi">
+            <?php include 'recenze.php'; ?>
+        </div>
+    </section>
+
+</main>
