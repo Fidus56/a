@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #222;
+  background-color: #f5f5f5;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto 0;
+  padding: 15px 25px;
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  align-items: center;
+  border-radius: 1px;
+}
+
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #d7b27a;
+}
+
+.socialni-link{
+  justify-self: end;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  padding: 120px 8% 80px;
+  background-image: url("fotka.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+  display: grid;
+  gap: 25px;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 54px;
+  line-height: 1.1;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 580px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn-primarni {
+  background-color: #b08968;
+  color: white;
+}
+
+.btn-primarni:hover {
+  background-color: #8d6e57;
+}
+
+.btn-sekundarni {
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+}
+
+.btn-sekundarni:hover {
+  background-color: white;
+  color: #222;
+}
+
+
+
+/*////////////////////////////////////////////*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.galerie-obrazky {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery {
+  text-align: center;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  opacity: 1;
+}
+
+.gallery p {
+  cursor: pointer;
+  color: #b08968;
+  transition: 0.3s;
+}
+
+.gallery p:hover {
+  text-decoration: underline;
+  color: #8d6e57;
+}
+
+
+/*////////////////////////////////////////////*/
+.sluzby{
+    display: inline-block;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/*////////////////////////////////////////////*/
+
+.kontakty {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.obrazek img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+
+}
+
+.obrazek p{
+
+color: #b08968;
+transition: 0.3s;
+}
+
+.obrazek p:hover {
+  text-decoration: underline;
+  color: #8d6e57;
+}
+/*////////////////////////////////////////////*/
+.recenze-form input,
+.recenze-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.recenze-form button {
+  background-color: #b08968;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.karticka {
+  background: #f9f9f9;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #b08968;
+}
+
+.karticka h3 {
+  margin-bottom: 5px;
+}
+
+.karticka small {
+  color: gray;
+}
+
+/*////////////////////////////////////////////*/
+
+.section {
+  padding: 80px 8%;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  max-width: 800px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+
+/* to jak to je responzivní */
+@media (max-width: 900px) {
+  .navbar {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .social-link {
+    justify-self: center;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+}
+
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+text-decoration: none;
+}
