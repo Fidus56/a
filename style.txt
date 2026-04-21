@@ -1,146 +1,146 @@
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* zapne plynulé scrollování mezi sekcemi */
 }
 
 body {
-    font-family: Verdana, sans-serif;
-    color: #111;
-    background-color: #f1f1f1;
-    line-height: 1.6;
+    font-family: Verdana, sans-serif; /* nastaví font stránky */
+    color: #111; /* barva textu (tmavá) */
+    background-color: #f1f1f1; /* světle šedé pozadí stránky */
+    line-height: 1.6; /* výška řádku (lepší čitelnost) */
 }
 
 /* NAV */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: fixed; /* header zůstává nahoře při scrollování */
+    top: 0; /* úplně nahoře */
+    left: 0; /* úplně vlevo */
+    width: 100%; /* přes celou šířku */
+    background: #fff; /* bílé pozadí */
+    z-index: 1000; /* bude nad ostatním obsahem */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* jemný stín pod headerem */
 }
 
 .navbar {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 14px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    max-width: 1200px; /* maximální šířka navigace */
+    margin: 0 auto; /* vycentrování */
+    padding: 14px 24px; /* vnitřní odsazení */
+    display: flex; /* prvky vedle sebe */
+    align-items: center; /* vertikální zarovnání */
+    justify-content: space-between; /* rozdělení prostoru */
+    gap: 20px; /* mezery mezi prvky */
 }
 
 .logo img {
-    display: block;
-    width: 120px;
-    height: auto;
+    display: block; /* odstraní inline mezery */
+    width: 120px; /* šířka loga */
+    height: auto; /* zachování poměru */
 }
 
 .nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 26px;
-    margin: 0;
-    padding: 0;
+    list-style: none; /* odstraní odrážky */
+    display: flex; /* položky vedle sebe */
+    gap: 26px; /* mezery mezi odkazy */
+    margin: 0; /* odstraní defaultní margin */
+    padding: 0; /* odstraní defaultní padding */
 }
 
 .nav-menu a {
-    color: #111;
-    text-decoration: none;
-    font-size: 15px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    color: #111; /* barva textu */
+    text-decoration: none; /* odstraní podtržení */
+    font-size: 15px; /* velikost textu */
+    letter-spacing: 1px; /* mezery mezi písmeny */
+    text-transform: uppercase; /* velká písmena */
 }
 
 .nav-menu a:hover {
-    color: #777;
+    color: #777; /* změní barvu při hoveru */
 }
 
 .socialni-link img {
-    width: 28px;
+    width: 28px; /* velikost ikonky */
     height: 28px;
 }
 
 /* HERO */
 .hero {
-    position: relative;
-    min-height: 100vh;
-    background: url("img/fotka.png") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    padding: 120px 8% 80px;
+    position: relative; /* kvůli overlay */
+    min-height: 100vh; /* výška celé obrazovky */
+    background: url("img/fotka.png") center/cover no-repeat; /* obrázek pozadí */
+    display: flex; /* flex layout */
+    align-items: center; /* vertikální centrování */
+    padding: 120px 8% 80px; /* odsazení */
 }
 
 .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
+    position: absolute; /* překryje celý hero */
+    inset: 0; /* top, left, right, bottom = 0 */
+    background: rgba(0,0,0,0.45); /* tmavý overlay */
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 720px;
-    color: #fff;
+    position: relative; /* nad overlay */
+    z-index: 2; /* aby byl vidět */
+    max-width: 720px; /* maximální šířka textu */
+    color: #fff; /* bílý text */
 }
 
 .hero-content h1 {
-    font-size: 54px;
-    letter-spacing: 2px;
-    margin-bottom: 18px;
-    text-transform: uppercase;
+    font-size: 54px; /* velký nadpis */
+    letter-spacing: 2px; /* mezery mezi písmeny */
+    margin-bottom: 18px; /* mezera dolů */
+    text-transform: uppercase; /* velká písmena */
 }
 
 .hero-content p {
-    font-size: 18px;
-    max-width: 620px;
-    margin-bottom: 28px;
+    font-size: 18px; /* velikost textu */
+    max-width: 620px; /* omezení šířky */
+    margin-bottom: 28px; /* mezera dolů */
 }
 
 .hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
+    display: flex; /* tlačítka vedle sebe */
+    flex-wrap: wrap; /* zalamování */
+    gap: 14px; /* mezery */
 }
 
 .btn {
-    display: inline-block;
-    padding: 12px 24px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
+    display: inline-block; /* blok ale vedle sebe */
+    padding: 12px 24px; /* velikost tlačítka */
+    text-decoration: none; /* odstraní podtržení */
+    border: none; /* žádný rámeček */
+    cursor: pointer; /* ruka při hoveru */
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: 0.25s;
+    transition: 0.25s; /* animace */
 }
 
 .btn-primarni {
-    background: #111;
-    color: #fff;
+    background: #111; /* černé tlačítko */
+    color: #fff; /* bílý text */
 }
 
 .btn-primarni:hover {
-    background: #444;
+    background: #444; /* světlejší při hoveru */
 }
 
 .btn-sekundarni {
-    background: #fff;
-    color: #111;
+    background: #fff; /* bílé tlačítko */
+    color: #111; /* tmavý text */
 }
 
 .btn-sekundarni:hover {
-    background: #ddd;
+    background: #ddd; /* změna barvy */
 }
 
 /* SECTIONS */
 .section {
-    padding: 96px 8% 72px;
-    background: #fff;
+    padding: 96px 8% 72px; /* odsazení sekcí */
+    background: #fff; /* bílé pozadí */
 }
 
 .section:nth-child(even) {
-    background: #f7f7f7;
+    background: #f7f7f7; /* střídání barev */
 }
 
 .section h2 {
@@ -148,7 +148,7 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 18px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; /* čára */
     padding-bottom: 12px;
 }
 
@@ -158,7 +158,7 @@ body {
 }
 
 .section img {
-    max-width: 100%;
+    max-width: 100%; /* nepřeteče */
     height: auto;
     display: block;
     margin-top: 24px;
@@ -166,8 +166,8 @@ body {
 
 /* KARTIČKY */
 .galerie-obrazky {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid; /* grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 sloupce */
     gap: 24px;
     margin-top: 24px;
 }
@@ -179,64 +179,37 @@ body {
     box-shadow: 0 2px 6px rgba(0,0,0,0.04);
 }
 
-.karticka h3 {
-    margin-bottom: 12px;
-    font-size: 20px;
-    letter-spacing: 1px;
-}
-
-.karticka p {
-    font-size: 16px;
-}
-
 /* UKÁZKY */
 .ukazky-box {
-    width: fit-content;
-    margin: 30px auto 0 auto;
+    width: fit-content; /* šířka podle obsahu */
+    margin: 30px auto 0 auto; /* vycentrování */
     text-align: center;
-    
 }
 
 .ukazky-box img {
     display: block;
     max-width: 500px;
     width: 100%;
-    height: auto;
     border: 1px solid #ccc;
     padding: 5px;
     background-color: white;
 }
 
 .ukazky-menu h3 {
-    cursor: pointer;
+    cursor: pointer; /* ruka při hoveru */
 }
 
 .ukazky-box p {
     margin-top: 10px;
-    text-align: center;
 }
+
 /* MODAL */
 .modal {
-    display: none;
-    position: fixed;
+    display: none; /* skrytý */
+    position: fixed; /* přes celou obrazovku */
     z-index: 9999;
     inset: 0;
-    background: rgba(0,0,0,0.9);
-    padding: 20px;
-    
-}
-
-.modal-content {
-    display: block;
-    margin: 60px auto 20px;
-    max-width: 85%;
-    max-height: 75vh;
-}
-
-#galerie-popisek {
-    text-align: center;
-    color: white;
-    font-size: 18px;
+    background: rgba(0,0,0,0.9); /* tmavé pozadí */
 }
 
 /* KONTAKT */
