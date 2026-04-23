@@ -1,0 +1,60 @@
+<?php
+
+$conn = mysqli_connect("localhost", "root", "", "drnec");
+
+if (!$conn) {
+    die("Chyba připojení: " . mysqli_connect_error());
+}
+
+mysqli_set_charset($conn, "utf8");
+
+/* vložení dat */
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    $jmeno = trim($_POST['jmeno']);
+    $email = trim($_POST['email']);
+    $recenze = trim($_POST['recenze']);
+
+    if (!empty($jmeno) && !empty($email) && !empty($recenze)) {
+
+        $stmt = mysqli_prepare($conn, "INSERT INTO recenze (jmeno, email, recenze) VALUES (?, ?, ?)");
+        mysqli_stmt_bind_param($stmt, "sss", $jmeno, $email, $recenze);
+
+        if (mysqli_stmt_execute($stmt)) {
+            echo "<p>Recenze byla úspěšně odeslána.</p>";
+        } else {
+            echo "<p>Chyba při ukládání recenze.</p>";
+        }
+
+        mysqli_stmt_close($stmt);
+    } else {
+        echo "<p>Vyplň všechna pole.</p>";
+    }
+}
+
+/* výpis dat */
+$sql = "SELECT * FROM recenze ORDER BY id DESC";
+$result = mysqli_query($conn, $sql);
+if ($result && mysqli_num_rows($result) > 0) {
+
+    echo "<div class='recenze-container'>";
+
+    while ($row = mysqli_fetch_assoc($result)) {
+
+        echo "<div class='karticka'>";
+        echo "<h3>" . htmlspecialchars($row['jmeno']) . "</h3>";
+        echo "<small>" . htmlspecialchars($row['email']) . "</small>";
+        echo "<p>" . htmlspecialchars($row['recenze']) . "</p>";
+        /*echo "<small>" . $row['datum'] . "</small>";
+        Kdybych chtěl datum musím jít do PHP admin
+        přidá sloupec datum
+        nové recenze budou mít čas vytvoření automaticky
+        */
+        echo "</div>";
+    }
+
+    echo "</div>";
+
+} else {
+    echo "<p>Zatím tu nejsou žádné recenze.</p>";
+}
