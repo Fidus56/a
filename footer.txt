@@ -1,0 +1,9 @@
+<footer class="section">
+    © 2026 Filip Drnec | <a href="mailto:Filip.Drnec@student.souepl.cz">
+    Filip.Drnec@student.souepl.cz
+</a>
+</footer>
+
+<script src="Java.js"></script>
+</body>
+</html>
